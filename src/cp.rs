@@ -4,7 +4,7 @@ use std::{convert::TryFrom, path::PathBuf};
 use tame_gcs::objects::{self, Metadata};
 
 #[derive(clap::ValueEnum, Clone, Copy)]
-enum Acl {
+pub enum Acl {
     ProjectPrivate,
     Private,
     PublicRead,
