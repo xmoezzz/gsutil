@@ -30,13 +30,13 @@ impl From<Acl> for tame_gcs::common::PredefinedAcl {
 pub struct Args {
     /// Predefined ACL to apply to the destination GCS object
     #[clap(short = 'a')]
-    predef_acl: Option<Acl>,
+    pub predef_acl: Option<Acl>,
     /// A gs: URL or filepath for the source path to copy from,
     /// wildcards are not currently supported
-    src_url: String,
+    pub src_url: String,
     /// A gs: URL or filepath for the destination to copy to,
     /// wildcards are not currently supported
-    dest_url: String,
+    pub dest_url: String,
 }
 
 enum DataPath {
